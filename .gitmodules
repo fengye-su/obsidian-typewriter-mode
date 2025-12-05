@@ -1,3 +1,0 @@
-[submodule "scripts/common"]
-	path = scripts/common
-	url = git@github.com:davisriedel/bun-obsidian-plugin-build-scripts.git
