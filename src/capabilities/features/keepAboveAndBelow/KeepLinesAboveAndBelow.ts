@@ -6,7 +6,7 @@ export default class KeepLinesAboveAndBelow extends FeatureToggle {
 		"isKeepLinesAboveAndBelowEnabled";
 	protected settingTitle = "保留上下行";
 	protected settingDesc =
-		"启用后，始终在视图中保留当前行上下指定数量的行";
+		"启用后，始终在视图中当前行上下保留指定数量的行";
 
 	protected override isSettingEnabled(): boolean {
 		return !this.tm.settings.isTypewriterScrollEnabled;

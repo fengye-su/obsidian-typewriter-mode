@@ -1,6 +1,5 @@
 import { type App, Plugin, type PluginManifest } from "obsidian";
 import type { TypewriterModeSettings } from "./capabilities/settings";
-import { UpdateModal } from "./components/UpdateModal";
 import TypewriterModeLib from "./lib";
 
 export default class TypewriterModePlugin extends Plugin {
@@ -19,30 +18,9 @@ export default class TypewriterModePlugin extends Plugin {
 		await this.tm.load();
 
 		this.tm.loadSettingsTab();
-
-		// Load update announcer
-		this.app.workspace.onLayoutReady(() => {
-			this.announceUpdate();
-		});
 	}
 
 	override onunload() {
 		this.tm.unload();
-	}
-
-	private announceUpdate() {
-		const currentVersion = this.manifest.version;
-		const knownVersion = this.tm.settings.version;
-
-		if (!knownVersion) return; // do not announce on first install
-		if (currentVersion === knownVersion) return;
-
-		this.tm.settings.version = currentVersion;
-		this.tm.saveSettings().then();
-
-		if (this.tm.settings.isAnnounceUpdatesEnabled === false) return;
-
-		const updateModal = new UpdateModal(this.app, currentVersion, knownVersion);
-		updateModal.open();
 	}
 }

@@ -56,7 +56,6 @@ export default class TypewriterModeLib {
 
 	public async load() {
 		await this.loadSettings();
-		await this.saveSettings(); // if default settings were loaded
 
 		this.loadPerWindowProps();
 		this.loadEditorExtension();

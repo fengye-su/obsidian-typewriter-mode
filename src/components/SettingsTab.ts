@@ -68,10 +68,5 @@ export default class TypewriterModeSettingTab extends PluginSettingTab {
 		for (const feature of Object.values(this.tm.features.writingFocus)) {
 			feature.registerSetting(this);
 		}
-
-		this.addHeading("更新通知与赞助");
-		for (const feature of Object.values(this.tm.features.updates)) {
-			feature.registerSetting(this);
-		}
 	}
 }
