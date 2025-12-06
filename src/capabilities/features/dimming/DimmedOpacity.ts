@@ -8,8 +8,7 @@ export default class DimmedOpacity extends Feature {
 
 	registerSetting(settingTab: PluginSettingTab): void {
 		new Setting(settingTab.containerEl)
-			.setName("Opacity of dimmed elements")
-			.setDesc("The opacity of dimmed elements")
+			.setName("暗化元素的不透明度")
 			.setClass("typewriter-mode-setting")
 			.addSlider((slider) =>
 				slider

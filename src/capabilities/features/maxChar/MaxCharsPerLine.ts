@@ -8,8 +8,8 @@ export default class MaxCharsPerLine extends Feature {
 
 	registerSetting(settingTab: PluginSettingTab): void {
 		new Setting(settingTab.containerEl)
-			.setName("Maximum number of characters per line")
-			.setDesc("The maximum number of characters per line")
+			.setName("每行最大字符数")
+			.setDesc("每行允许的最大字符数量")
 			.setClass("typewriter-mode-setting")
 			.addText((text) =>
 				text

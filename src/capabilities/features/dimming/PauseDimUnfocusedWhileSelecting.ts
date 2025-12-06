@@ -5,7 +5,7 @@ export default class PauseDimUnfocusedWhileSelecting extends FeatureToggle {
 	public settingKey: keyof TypewriterModeSettings =
 		"isPauseDimUnfocusedWhileSelectingEnabled";
 	protected override toggleClass = "ptm-dim-unfocused-pause-while-selecting";
-	protected settingTitle = "Pause dimming while selecting text";
+	protected settingTitle = "选中文本时暂停暗化";
 	protected settingDesc =
-		"If this is enabled, paragraphs / sentences are not dimmed while selecting text";
+		"启用后，选中文本时段落/句子不会被暗化";
 }

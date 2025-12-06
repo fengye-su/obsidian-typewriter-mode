@@ -5,7 +5,7 @@ export default class WritingFocusShowsHeader extends FeatureToggle {
 	public settingKey: keyof TypewriterModeSettings =
 		"doesWritingFocusShowHeader";
 	protected override toggleClass = "ptm-writing-focus-shows-header";
-	protected settingTitle = "Show header in writing focus";
+	protected settingTitle = "写作专注时显示标题栏";
 	protected settingDesc =
-		"If enabled, the header will be shown in writing focus";
+		"启用后，写作专注模式会显示标题栏";
 }

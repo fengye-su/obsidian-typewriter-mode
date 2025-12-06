@@ -18,10 +18,7 @@ export default abstract class CurrentLineHighlightColor extends Feature {
 
 	registerSetting(settingTab: PluginSettingTab): void {
 		new Setting(settingTab.containerEl)
-			.setName(`Current line highlight color in ${this.themeMode} themes`)
-			.setDesc(
-				`The color of the current line highlight in ${this.themeMode} themes`,
-			)
+			.setName(`${this.themeMode}主题中的当前行高亮颜色`)
 			.setClass("typewriter-mode-setting")
 			.addText((text) =>
 				text.setValue(this.getSettingValue() as string).onChange((newValue) => {

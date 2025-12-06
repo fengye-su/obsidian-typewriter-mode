@@ -10,13 +10,13 @@ export default class DimUnfocusedMode extends Feature {
 
 	registerSetting(settingTab: PluginSettingTab): void {
 		new Setting(settingTab.containerEl)
-			.setName("Dim unfocused mode")
-			.setDesc("Choose to dim unfocused paragraphs or sentences")
+			.setName("未聚焦内容的暗化模式")
+			.setDesc("选择暗化未聚焦的段落或句子")
 			.setClass("typewriter-mode-setting")
 			.addDropdown((dropdown) =>
 				dropdown
-					.addOption("paragraphs", "Paragraphs")
-					.addOption("sentences", "Sentences")
+					.addOption("paragraphs", "段落")
+					.addOption("sentences", "句子")
 					.setValue(this.tm.settings.dimUnfocusedMode)
 					.onChange((newValue) => {
 						this.change(newValue as Options);

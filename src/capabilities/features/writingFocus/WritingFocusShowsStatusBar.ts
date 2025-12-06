@@ -5,7 +5,7 @@ export default class WritingFocusShowsHeader extends FeatureToggle {
 	public settingKey: keyof TypewriterModeSettings =
 		"doesWritingFocusShowStatusBar";
 	protected override toggleClass = "ptm-writing-focus-shows-status-bar";
-	protected settingTitle = "Show status bar in writing focus";
+	protected settingTitle = "写作专注时显示状态栏";
 	protected settingDesc =
-		"If enabled, the status bar will be shown in writing focus";
+		"启用后，写作专注模式会显示状态栏";
 }

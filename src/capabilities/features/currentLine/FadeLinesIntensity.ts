@@ -8,8 +8,8 @@ export default class FadeLinesIntensity extends Feature {
 
 	registerSetting(settingTab: PluginSettingTab): void {
 		new Setting(settingTab.containerEl)
-			.setName("Intensity of the fade lines gradient")
-			.setDesc("How soon lines shall be faded out")
+			.setName("淡化行渐变强度")
+			.setDesc("控制行淡的速度")
 			.setClass("typewriter-mode-setting")
 			.addSlider((slider) =>
 				slider

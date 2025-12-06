@@ -3,7 +3,7 @@ import type { TypewriterModeSettings } from "@/capabilities/settings";
 
 export default class WritingFocusIsFullScreen extends FeatureToggle {
 	public settingKey: keyof TypewriterModeSettings = "isWritingFocusFullscreen";
-	protected settingTitle = "Make Obsidian fullscreen in writing focus";
+	protected settingTitle = "写作专注时让 Obsidian 全屏";
 	protected settingDesc =
-		"If enabled, the Obsidian window will toggle to fullscreen when entering writing focus";
+		"启用后，进入写作专注时会切换 Obsidian 窗口为全屏";
 }

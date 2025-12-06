@@ -9,19 +9,19 @@ export default class DimUnfocusedEditorsBehavior extends Feature {
 
 	registerSetting(settingTab: PluginSettingTab): void {
 		new Setting(settingTab.containerEl)
-			.setName("Dimming behavior in unfocused notes")
+			.setName("未聚焦笔记的暗化行为")
 			.setDesc(
-				"How to dim paragraphs / sentences in notes / editors that your cursor is not on (e.g. if you have multiple notes open in split panes)",
+				"光标不在的笔记/编辑器中段落或句子的暗化方式（例如拆分窗格打开多个笔记时）",
 			)
 			.setClass("typewriter-mode-setting")
 			.addDropdown((dropdown) =>
 				dropdown
-					.addOption("dim-none", "Do not dim anything")
+					.addOption("dim-none", "不暗化任何内容")
 					.addOption(
 						"dim",
-						"Dim all but the previously focused paragraph / sentence",
+						"除刚刚聚焦的段落/句子外全部暗化",
 					)
-					.addOption("dim-all", "Dim everything")
+					.addOption("dim-all", "暗化全部")
 					.setValue(this.tm.settings.dimUnfocusedEditorsBehavior)
 					.onChange((newValue) => {
 						this.changeDimUnfocusedEditorsBehavior(

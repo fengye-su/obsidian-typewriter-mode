@@ -5,6 +5,6 @@ export default class LimitMaxCharsPerLine extends FeatureToggle {
 	public settingKey: keyof TypewriterModeSettings = "isMaxCharsPerLineEnabled";
 	protected override toggleClass = "ptm-max-chars-per-line";
 	public override isToggleClassPersistent = true;
-	protected settingTitle = "Limit maximum number of characters per line";
-	protected settingDesc = "Limits the maximum number of characters per line";
+	protected settingTitle = "限制每行最大字符数";
+	protected settingDesc = "限制每行可显示的最大字符数";
 }

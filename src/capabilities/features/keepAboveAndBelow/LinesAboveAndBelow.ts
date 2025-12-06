@@ -8,9 +8,9 @@ export default class LinesAboveAndBelow extends Feature {
 
 	registerSetting(settingTab: PluginSettingTab): void {
 		new Setting(settingTab.containerEl)
-			.setName("Amount of lines above and below the current line")
+			.setName("当前行上下的保留行数")
 			.setDesc(
-				"The amount of lines to always keep above and below the current line",
+				"始终在当前行上下保留的行数",
 			)
 			.setClass("typewriter-mode-setting")
 			.addText((text) =>

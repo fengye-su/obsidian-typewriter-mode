@@ -5,7 +5,7 @@ export default class PauseDimUnfocusedParagraphsWhileScrolling extends FeatureTo
 	public settingKey: keyof TypewriterModeSettings =
 		"isPauseDimUnfocusedWhileScrollingEnabled";
 	protected override toggleClass = "ptm-dim-unfocused-pause-while-scrolling";
-	protected settingTitle = "Pause dimming while scrolling";
+	protected settingTitle = "滚动时暂停暗化";
 	protected settingDesc =
-		"If this is enabled, paragraphs / sentences are not dimmed while scrolling";
+		"启用后，滚动时段落/句子不会被暗化";
 }

@@ -4,7 +4,7 @@ import type { TypewriterModeSettings } from "@/capabilities/settings";
 export default class OnlyActivateAfterFirstInteraction extends FeatureToggle {
 	public settingKey: keyof TypewriterModeSettings =
 		"isOnlyActivateAfterFirstInteractionEnabled";
-	protected settingTitle = "Only activate after first interaction";
+	protected settingTitle = "仅在首次交互后启用";
 	protected settingDesc =
-		"Activate the focused line highlight and paragraph dimming only after the first interaction with the editor";
+		"仅在与编辑器进行第一次交互后再启用当前行高亮和段落暗化";
 }

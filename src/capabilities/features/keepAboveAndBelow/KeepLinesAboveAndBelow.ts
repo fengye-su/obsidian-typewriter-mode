@@ -4,9 +4,9 @@ import type { TypewriterModeSettings } from "@/capabilities/settings";
 export default class KeepLinesAboveAndBelow extends FeatureToggle {
 	public settingKey: keyof TypewriterModeSettings =
 		"isKeepLinesAboveAndBelowEnabled";
-	protected settingTitle = "Keep lines above and below";
+	protected settingTitle = "保留上下行";
 	protected settingDesc =
-		"When enabled, always keeps the specified amount of lines above and below the current line in view";
+		"启用后，始终在视图中保留当前行上下指定数量的行";
 
 	protected override isSettingEnabled(): boolean {
 		return !this.tm.settings.isTypewriterScrollEnabled;

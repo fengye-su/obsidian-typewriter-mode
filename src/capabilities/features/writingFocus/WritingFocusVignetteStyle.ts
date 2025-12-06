@@ -8,8 +8,8 @@ export default class WritingFocusVignetteStyle extends Feature {
 
 	registerSetting(settingTab: PluginSettingTab): void {
 		new Setting(settingTab.containerEl)
-			.setName("Writing focus vignette style")
-			.setDesc("The style of the vignette in writing focus mode")
+			.setName("写作专注vignette的样式")
+			.setDesc("写作专注模式下vignette的样式")
 			.setClass("typewriter-mode-setting")
 			.addDropdown((dropdown) =>
 				dropdown

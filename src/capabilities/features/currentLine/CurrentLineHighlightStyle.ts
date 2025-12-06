@@ -15,8 +15,8 @@ export default class CurrentLineHighlightStyle extends Feature {
 
 	registerSetting(settingTab: PluginSettingTab): void {
 		new Setting(settingTab.containerEl)
-			.setName("Current line highlight style")
-			.setDesc("The style of the current line highlight")
+			.setName("当前行高亮样式")
+            .setDesc("当前行高亮的显示样式")
 			.setClass("typewriter-mode-setting")
 			.addDropdown((dropdown) =>
 				dropdown

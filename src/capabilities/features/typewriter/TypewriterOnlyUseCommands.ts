@@ -5,7 +5,7 @@ export default class TypewriterOnlyUseCommands extends FeatureToggle {
 	public settingKey: keyof TypewriterModeSettings =
 		"isTypewriterOnlyUseCommandsEnabled";
 	protected override toggleClass = "ptm-typewriter-only-use-commands";
-	protected settingTitle = "Do not snap typewriter with arrow keys";
+	protected settingTitle = "方向键不触发打字机对齐";
 	protected settingDesc =
-		"The typewriter will only snap when using this plugin's move commands. It will not snap when using the arrow keys. The move commands are by default Cmd/Ctrl+ArrowUp/ArrowDown, but you can assign your own hotkeys for the move commands in Obsidian's settings.";
+		"仅在使用插件的移动命令时才会触发打字机对齐，方向键不会触发。默认移动命令为 Cmd/Ctrl+↑/↓，你可在 Obsidian 设置中自定义热键。";
 }

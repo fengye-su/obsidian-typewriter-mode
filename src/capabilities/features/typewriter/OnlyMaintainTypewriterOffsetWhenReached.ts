@@ -5,7 +5,7 @@ export default class OnlyMaintainTypewriterOffsetWhenReached extends FeatureTogg
 	public settingKey: keyof TypewriterModeSettings =
 		"isOnlyMaintainTypewriterOffsetWhenReachedEnabled";
 	protected hasCommand = false;
-	protected settingTitle = "Only maintain typewriter offset when reached";
+	protected settingTitle = "仅在达到打字机位置时进行偏移";
 	protected settingDesc =
-		"The line that the cursor is on will not be scrolled to the center of the editor until it the specified typewriter offset is reached. This removes the additional space at the top of the editor.";
+		"在达到指定的打字机位置前，光标所在行不会滚动到编辑器中央，从而移除编辑器顶部的额外空白。";
 }

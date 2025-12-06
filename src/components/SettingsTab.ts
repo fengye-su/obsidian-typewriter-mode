@@ -1,9 +1,6 @@
 import type TypewriterModeLib from "@/lib";
-import fundingText from "@/texts/Funding.md" with { type: "text" };
 import type { App } from "obsidian";
 import {
-	Component,
-	MarkdownRenderer,
 	PluginSettingTab,
 	Setting,
 } from "obsidian";
@@ -33,60 +30,48 @@ export default class TypewriterModeSettingTab extends PluginSettingTab {
 
 		this.addHeading("Typewriter");
 		if (this.tm.settings.isKeepLinesAboveAndBelowEnabled)
-			this.addText(
-				'Not available if "keep lines above and below" is activated',
-			);
+			this.addText('启用“上下保留行”时不可用');
 		for (const feature of Object.values(this.tm.features.typewriter)) {
 			feature.registerSetting(this);
 		}
 
-		this.addHeading("Keep lines above and below");
+		this.addHeading("上下保留行");
 		if (this.tm.settings.isTypewriterScrollEnabled)
-			this.addText("Not available if typewriter scrolling is activated");
+			this.addText("启用打字机滚动时不可用");
 		for (const feature of Object.values(this.tm.features.keepAboveAndBelow)) {
 			feature.registerSetting(this);
 		}
 
-		this.addHeading("Highlight current line");
+		this.addHeading("高亮当前行");
 		for (const feature of Object.values(this.tm.features.currentLine)) {
 			feature.registerSetting(this);
 		}
 
-		this.addHeading("Dimming");
+		this.addHeading("暗化");
 		for (const feature of Object.values(this.tm.features.dimming)) {
 			feature.registerSetting(this);
 		}
 
-		this.addHeading("Limit line width");
+		this.addHeading("限制行宽");
 		for (const feature of Object.values(this.tm.features.maxChar)) {
 			feature.registerSetting(this);
 		}
 
-		this.addHeading("Restore cursor position");
+		this.addHeading("恢复光标位置");
 		for (const feature of Object.values(
 			this.tm.features.restoreCursorPosition,
 		)) {
 			feature.registerSetting(this);
 		}
 
-		this.addHeading("Writing focus");
+		this.addHeading("写作专注");
 		for (const feature of Object.values(this.tm.features.writingFocus)) {
 			feature.registerSetting(this);
 		}
 
-		this.addHeading("Update notice and funding");
+		this.addHeading("更新通知与赞助");
 		for (const feature of Object.values(this.tm.features.updates)) {
 			feature.registerSetting(this);
 		}
-
-		const updateNoticeDiv = this.containerEl.createDiv();
-		this.containerEl.appendChild(updateNoticeDiv);
-		MarkdownRenderer.render(
-			this.app,
-			fundingText,
-			updateNoticeDiv,
-			this.app.vault.getRoot().path,
-			new Component(),
-		);
 	}
 }

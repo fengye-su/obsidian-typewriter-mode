@@ -5,7 +5,7 @@ export default class DimHighlightListParent extends FeatureToggle {
 	public settingKey: keyof TypewriterModeSettings =
 		"isDimHighlightListParentEnabled";
 	protected override toggleClass = "ptm-dim-highlight-list-parent";
-	protected settingTitle = "Highlight list parents";
+	protected settingTitle = "高亮列表父项";
 	protected settingDesc =
-		"If this is enabled, the parent items of the active list item are not dimmed";
+		"启用后，当前活动列表项的父项不会被暗化";
 }

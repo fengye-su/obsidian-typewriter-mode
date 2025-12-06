@@ -8,8 +8,8 @@ import type { TAbstractFile } from "obsidian";
 export default class RestoreCursorPosition extends FeatureToggle {
 	public settingKey: keyof TypewriterModeSettings =
 		"isRestoreCursorPositionEnabled";
-	protected settingTitle = "Restore cursor position";
-	protected settingDesc = "Restore the last cursor position when opening files";
+	protected settingTitle = "恢复光标位置";
+	protected settingDesc = "打开文件时恢复上次的光标位置";
 
 	private stateFilePath =
 		`${this.tm.plugin.manifest.dir}/cursor-positions.json`;
