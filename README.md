@@ -2,9 +2,9 @@
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
-| | | | | |
-| -- | -- | -- | -- | -- |
-|[![](https://img.shields.io/badge/GitHub-%2330363E.svg?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/davisriedel/obsidian-typewriter-mode)|[![](https://img.shields.io/badge/Obsidian-%23483699.svg?style=for-the-badge\&logo=obsidian\&logoColor=white)](https://obsidian.md/)|[![](https://img.shields.io/github/v/release/davisriedel/obsidian-typewriter-mode?style=for-the-badge)](https://github.com/davisriedel/obsidian-typewriter-mode/releases)|[![](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge\&logo=buy-me-a-coffee\&logoColor=black)](https://www.buymeacoffee.com/davis.riedel)|[![](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge\&logo=GitHub-Sponsors\&logoColor=#EA4AAA)](https://github.com/sponsors/davisriedel)|
+| | | |
+| -- | -- | -- |
+|[![](https://img.shields.io/badge/GitHub-%2330363E.svg?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/davisriedel/obsidian-typewriter-mode)|[![](https://img.shields.io/badge/Obsidian-%23483699.svg?style=for-the-badge\&logo=obsidian\&logoColor=white)](https://obsidian.md/)|[![](https://img.shields.io/github/v/release/davisriedel/obsidian-typewriter-mode?style=for-the-badge)](https://github.com/davisriedel/obsidian-typewriter-mode/releases)
 <!-- markdownlint-restore -->
 
 Typewriter Mode is plugin that adds several features to turn [Obsidian](https://obsidian.md) into a typewriter-like, distraction-free writing environment, including:
@@ -56,24 +56,9 @@ The restore cursor position feature was derived from [Remember Cursor Position](
 
 Many thanks to the developers of these fantastic plugins. Please also consider supporting them.
 
-## Support this project
-
-I am studying Computer Science at Karlsruhe Institute of Technology (KIT) in Germany. I develop this plugin in my spare time. If you wish to support me and the continuous development of this plugin, you can donate via GitHub Sponsors or Buy Me a Coffee. I am truly thankful for your support.
-
-<!-- markdownlint-disable-next-line -->
-[![](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge\&logo=buy-me-a-coffee\&logoColor=black)](https://www.buymeacoffee.com/davis.riedel)
-<!-- markdownlint-disable-next-line -->
-[![](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge\&logo=GitHub-Sponsors\&logoColor=#EA4AAA)](https://github.com/sponsors/davisriedel)
-
 ## Changelog
 
 See the [`CHANGELOG.md`](CHANGELOG.md) file.
-
-## Contribute
-
-**You are welcome to open issues and contribute to this project!**
-
-See the [`DEVELOPMENT.md`](DEVELOPMENT.md) file for instructions.
 
 ## License
 
