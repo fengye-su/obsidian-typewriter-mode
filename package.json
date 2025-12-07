@@ -2,10 +2,10 @@
 	"name": "obsidian-typewriter-mode",
 	"version": "1.1.2",
 	"obsidianMinAppVersion": "0.15.0",
-	"author": "Davis Riedel",
+	"author": "fengye-su",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/davisriedel/obsidian-typewriter-mode"
+		"url": "https://github.com/fengye-su/obsidian-typewriter-mode"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",

@@ -1,4 +1,7 @@
 # Changelog
+## 1.1.2
+
+Remove unused features
 
 ## 1.1.1-beta.1
 

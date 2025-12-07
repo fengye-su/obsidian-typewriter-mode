@@ -4,7 +4,7 @@
 <!-- markdownlint-disable -->
 | | | |
 | -- | -- | -- |
-|[![](https://img.shields.io/badge/GitHub-%2330363E.svg?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/davisriedel/obsidian-typewriter-mode)|[![](https://img.shields.io/badge/Obsidian-%23483699.svg?style=for-the-badge\&logo=obsidian\&logoColor=white)](https://obsidian.md/)|[![](https://img.shields.io/github/v/release/davisriedel/obsidian-typewriter-mode?style=for-the-badge)](https://github.com/davisriedel/obsidian-typewriter-mode/releases)
+|[![](https://img.shields.io/badge/GitHub-%2330363E.svg?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/fengye-su/obsidian-typewriter-mode)|[![](https://img.shields.io/badge/Obsidian-%23483699.svg?style=for-the-badge\&logo=obsidian\&logoColor=white)](https://obsidian.md/)|[![](https://img.shields.io/github/v/release/fengye-su/obsidian-typewriter-mode?style=for-the-badge)](https://github.com/fengye-su/obsidian-typewriter-mode/releases)
 <!-- markdownlint-restore -->
 
 Typewriter Mode is plugin that adds several features to turn [Obsidian](https://obsidian.md) into a typewriter-like, distraction-free writing environment, including:
@@ -36,13 +36,13 @@ You can install this plugin within Obsidian by doing the following:
 
 ### Manual
 
-1. Download the latest release from GitHub: [https://github.com/davisriedel/obsidian-typewriter-mode/releases](https://github.com/davisriedel/obsidian-typewriter-mode/releases)
+1. Download the latest release from GitHub: [https://github.com/fengye-su/obsidian-typewriter-mode/releases](https://github.com/fengye-su/obsidian-typewriter-mode/releases)
 2. Extract the plugin folder from the zip to your vault's plugins folder: `<vault>/.obsidian/plugins/`. _Note: On some machines, the `.obsidian` folder may be hidden. On macOS, you should be able to press `Command+Shift+Dot` to show the folder in Finder._
 3. Force reload Obsidian
 
 ### Beta Versions With BRAT
 
-Follow the instructions in the repository of the [BRAT plugin](https://github.com/TfTHacker/obsidian42-brat#Quick-Guide-for-using-BRAT) and use this repository's URL: `https://github.com/davisriedel/obsidian-typewriter-mode` to install **beta versions** of the plugin.
+Follow the instructions in the repository of the [BRAT plugin](https://github.com/TfTHacker/obsidian42-brat#Quick-Guide-for-using-BRAT) and use this repository's URL: `https://github.com/fengye-su/obsidian-typewriter-mode` to install **beta versions** of the plugin.
 
 ## Acknowledgements
 
