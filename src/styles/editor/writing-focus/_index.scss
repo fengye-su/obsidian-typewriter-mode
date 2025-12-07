@@ -1,7 +1,0 @@
-@use "vignette";
-@use "hide-elements";
-
-body.ptm-focus-mode {
-  @include hide-elements.writing-focus-hide-elements;
-  @include vignette.writing-focus-vignette;
-}

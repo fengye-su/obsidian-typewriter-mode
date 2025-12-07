@@ -11,7 +11,6 @@ import {
 	type ViewUpdate,
 } from "@codemirror/view";
 import { ItemView, Platform } from "obsidian";
-import { getActiveSentenceDecos } from "./highlightSentence";
 import { getEditorDom, getScrollDom, getSizerDom } from "./selectors";
 
 const currentLineClass = "ptm-current-line";
@@ -263,29 +262,6 @@ class TypewriterModeCM6Plugin {
 			editorDom.appendChild(currentLine);
 		}
 
-		if (this.tm.settings.isFadeLinesEnabled) {
-			let fadeBefore = editorDom.querySelector(
-				`.${fadeBeforeClass}`,
-			) as HTMLElement;
-			let fadeAfter = editorDom.querySelector(
-				`.${fadeAfterClass}`,
-			) as HTMLElement;
-
-			if (!fadeBefore) {
-				fadeBefore = document.createElement("div");
-				fadeBefore.className = fadeBeforeClass;
-				editorDom.appendChild(fadeBefore);
-			}
-
-			if (!fadeAfter) {
-				fadeAfter = document.createElement("div");
-				fadeAfter.className = fadeAfterClass;
-				editorDom.appendChild(fadeAfter);
-			}
-
-			return { currentLine, fadeBefore, fadeAfter };
-		}
-
 		return { currentLine };
 	}
 
@@ -362,7 +338,6 @@ class TypewriterModeCM6Plugin {
 		console.debug("updateAllowedUserEvent");
 
 		this.removeScrollListener();
-		this.applyDecorations();
 
 		const editorDom = getEditorDom(this.view);
 		if (editorDom) {
@@ -414,8 +389,7 @@ class TypewriterModeCM6Plugin {
 
 				const { activeLineOffset, lineHeight, lineOffset } = measure;
 				if (
-					this.tm.settings.isHighlightCurrentLineEnabled ||
-					this.tm.settings.isFadeLinesEnabled
+					this.tm.settings.isHighlightCurrentLineEnabled
 				)
 					this.moveCurrentLine(view, activeLineOffset, lineOffset, lineHeight);
 			},
@@ -424,8 +398,6 @@ class TypewriterModeCM6Plugin {
 
 	private updateNonUserEvent() {
 		console.debug("updateNonUserEvent");
-
-		this.applyDecorations();
 
 		if (!this.isInitialInteraction) return;
 
@@ -466,20 +438,6 @@ class TypewriterModeCM6Plugin {
 		);
 	}
 
-	private applyDecorations() {
-		if (
-			!this.tm.settings.isDimUnfocusedEnabled ||
-			this.tm.settings.dimUnfocusedMode !== "sentences"
-		)
-			return;
-
-		this.decorations = getActiveSentenceDecos(this.view, {
-			sentenceDelimiters: ".!?",
-			extraCharacters: "*“”‘’",
-			ignoredPatterns: "Mr.",
-		});
-	}
-
 	private updateAfterExternalEvent() {
 		console.debug("updateAfterExternalEvent");
 
@@ -489,7 +447,6 @@ class TypewriterModeCM6Plugin {
 		}
 
 		this.loadPerWindowProps();
-		this.applyDecorations();
 
 		this.measureTypewriterPosition(
 			"TypewriterModeUpdateAfterExternalEvent",
@@ -519,12 +476,6 @@ class TypewriterModeCM6Plugin {
 
 		result.currentLine.style.height = `${lineHeight}px`;
 		result.currentLine.style.top = `${offset - lineOffset}px`;
-
-		// this is a workaround, because fadeBefore.style.bottom does not work somehow...
-		if (result.fadeBefore)
-			result.fadeBefore.style.top = `calc(${offset - lineOffset}px - 100vh)`;
-		if (result.fadeAfter)
-			result.fadeAfter.style.top = `${offset - lineOffset + lineHeight}px`;
 	}
 
 	private setPadding(view: EditorView, offset: number) {
@@ -564,13 +515,11 @@ class TypewriterModeCM6Plugin {
 	) {
 		const {
 			isTypewriterScrollEnabled,
-			isKeepLinesAboveAndBelowEnabled,
 			isHighlightCurrentLineEnabled,
-			isFadeLinesEnabled,
 		} = this.tm.settings;
-		if (isTypewriterScrollEnabled || isKeepLinesAboveAndBelowEnabled)
+		if (isTypewriterScrollEnabled)
 			this.recenter(view, scrollOffset);
-		if (isHighlightCurrentLineEnabled || isFadeLinesEnabled)
+		if (isHighlightCurrentLineEnabled)
 			this.moveCurrentLine(view, scrollOffset, lineOffset, lineHeight);
 	}
 
