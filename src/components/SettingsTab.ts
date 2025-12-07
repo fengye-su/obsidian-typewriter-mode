@@ -47,25 +47,10 @@ export default class TypewriterModeSettingTab extends PluginSettingTab {
 			feature.registerSetting(this);
 		}
 
-		this.addHeading("暗化");
-		for (const feature of Object.values(this.tm.features.dimming)) {
-			feature.registerSetting(this);
-		}
-
-		this.addHeading("限制行宽");
-		for (const feature of Object.values(this.tm.features.maxChar)) {
-			feature.registerSetting(this);
-		}
-
 		this.addHeading("恢复光标位置");
 		for (const feature of Object.values(
 			this.tm.features.restoreCursorPosition,
 		)) {
-			feature.registerSetting(this);
-		}
-
-		this.addHeading("写作专注");
-		for (const feature of Object.values(this.tm.features.writingFocus)) {
 			feature.registerSetting(this);
 		}
 	}
