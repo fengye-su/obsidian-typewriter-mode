@@ -17,10 +17,6 @@ export default class TypewriterModeSettingTab extends PluginSettingTab {
 		return new Setting(this.containerEl).setName(text).setHeading();
 	}
 
-	private addText(text: string) {
-		return new Setting(this.containerEl).setName(text);
-	}
-
 	display(): void {
 		this.containerEl.empty();
 
@@ -29,16 +25,7 @@ export default class TypewriterModeSettingTab extends PluginSettingTab {
 		}
 
 		this.addHeading("Typewriter");
-		if (this.tm.settings.isKeepLinesAboveAndBelowEnabled)
-			this.addText('启用“上下保留行”时不可用');
 		for (const feature of Object.values(this.tm.features.typewriter)) {
-			feature.registerSetting(this);
-		}
-
-		this.addHeading("上下保留行");
-		if (this.tm.settings.isTypewriterScrollEnabled)
-			this.addText("启用打字机滚动时不可用");
-		for (const feature of Object.values(this.tm.features.keepAboveAndBelow)) {
 			feature.registerSetting(this);
 		}
 

@@ -3,7 +3,6 @@ import type { Feature } from "../base/Feature";
 import { loadCapabilityGroups } from "../base/loadCapabilityGroups";
 import currentLine from "./currentLine";
 import general from "./general";
-import keepAboveAndBelow from "./keepAboveAndBelow";
 import restoreCursorPosition from "./restoreCursorPosition";
 import typewriter from "./typewriter";
 
@@ -13,7 +12,6 @@ export function getFeatures(
 	return loadCapabilityGroups<Feature>(tm, {
 		currentLine,
 		general,
-		keepAboveAndBelow,
 		typewriter,
 		restoreCursorPosition,
 	});

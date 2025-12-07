@@ -8,8 +8,6 @@ export interface TypewriterModeSettings {
 	isOnlyMaintainTypewriterOffsetWhenReachedEnabled: boolean;
 	isTypewriterOnlyUseCommandsEnabled: boolean;
 	typewriterOffset: number;
-	isKeepLinesAboveAndBelowEnabled: boolean;
-	linesAboveAndBelow: number;
 	isPauseDimUnfocusedWhileScrollingEnabled: boolean;
 	isPauseDimUnfocusedWhileSelectingEnabled: boolean;
 	isHighlightCurrentLineEnabled: boolean;
@@ -30,8 +28,6 @@ export const DEFAULT_SETTINGS: TypewriterModeSettings = {
 	isOnlyMaintainTypewriterOffsetWhenReachedEnabled: false,
 	isTypewriterOnlyUseCommandsEnabled: false,
 	typewriterOffset: 0.5,
-	isKeepLinesAboveAndBelowEnabled: false,
-	linesAboveAndBelow: 5,
 	isPauseDimUnfocusedWhileScrollingEnabled: true,
 	isPauseDimUnfocusedWhileSelectingEnabled: true,
 	isHighlightCurrentLineEnabled: true,
